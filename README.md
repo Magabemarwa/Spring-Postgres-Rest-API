@@ -1,0 +1,1 @@
+# Spring-Boot application to demonstrate how to develop rest API with postgres,actuator and documentation using swagger. It will also demonstrate securing our endpoints with Google (Similar scenario with other Oauth2 providers) Oauth2
