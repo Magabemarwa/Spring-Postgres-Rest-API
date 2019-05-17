@@ -25,7 +25,7 @@ import org.hibernate.annotations.OnDeleteAction;
  */
 @Entity
 @Table(name ="answers")
-public class Answers implements Serializable{
+public class Answers extends AuditModel implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
