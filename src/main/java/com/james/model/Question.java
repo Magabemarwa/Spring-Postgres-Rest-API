@@ -5,6 +5,8 @@
  */
 package com.james.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,17 +23,21 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name="questions")
+@ApiModel(description = "All details about the questions")
 public class Question extends AuditModel implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(notes="The database generated question ID")
     private Long id;
     
     @NotBlank
     @Size(min = 3, max = 100)
+    @ApiModelProperty(notes = "The question title")
     private String title;
     
     @Column(columnDefinition = "text")
+    @ApiModelProperty(notes = "The question description")
     private String description;
 
     public Question() {
@@ -68,8 +74,6 @@ public class Question extends AuditModel implements Serializable{
     public void setDescription(String description) {
         this.description = description;
     }
-    
-    
-    
+
     
 }

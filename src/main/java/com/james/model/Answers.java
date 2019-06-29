@@ -7,6 +7,7 @@ package com.james.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
+import java.util.Optional;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -71,6 +72,10 @@ public class Answers extends AuditModel implements Serializable{
 
     public void setQuestion(Question question) {
         this.question = question;
+    }
+
+    public void setQuestion(Optional<Question> q) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
